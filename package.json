@@ -1,6 +1,6 @@
 {
   "name": "statsd-http-interface",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "StatsD interface ('server interface') that accepts metrics via HTTP PUTs",
   "main": "index.js",
   "scripts": {
