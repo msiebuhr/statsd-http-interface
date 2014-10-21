@@ -6,13 +6,16 @@ Adds a HTTP front-end to [StatsD](http://github.com/etsy/statsd). Install this p
     {
       ...
       server: 'statsd-http-interface',
-      port: 8080, // The server will open a HTTP interface on this port
-      // token: 'SECRET' // Require a `token`-header to have this value before accepting any data.
+      // The server will open a HTTP interface on this port
+      port: 8080,
+      // Require a `token`-header to have this value before accepting any data.
+      // token: 'SECRET'
     }
 
 Sending data to the client can be done thusly:
 
-    echo foo:0\|c\\nbar:1\|c\\nbaz:2\|c | curl localhost:8080 --data-binary @- --header 'token: SECRET'
+    echo 'foo:0|c\nbar:1|c\nbaz:2|c' | \
+      curl localhost:8080 --data-binary @- --header 'token: SECRET'
 
 Why?
 ----
