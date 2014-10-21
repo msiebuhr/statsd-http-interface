@@ -1,6 +1,11 @@
 statsd-http-interface
 =====================
 
+**☠ Warning - Only works on StatsD's master branch ☠**
+
+(That is, you will need a release after `0.7.2` for this to work.)
+
+
 Adds a HTTP front-end to [StatsD](http://github.com/etsy/statsd). Install this package along with StatsD and change the cofig thusly:
 
     {
